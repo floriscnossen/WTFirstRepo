@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            width: 30px;
+            height: 30px;
+            border: 2px solid red;
+            background-color: white;
+        }
+        td:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+<table>
+<tbody>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+    <script>
+        var elements = document.getElementsByTagName("td");
+        function getCell(i,j) {
+            return elements[i*7 + j];
+        }
+        for (let i = 0; i < 6; i++) {
+            for (let j = 0; j < 7; j++) {
+                document.getElementsByTagName("td")[i*7 + j].innerHtml = "("+ i + ", " + j + ")";
+            }
+        }
+        getCell(0,0).innerHtml = "(0,0)";
+    </script>
+</body>
+</html>
