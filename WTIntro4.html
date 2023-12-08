@@ -1,0 +1,19 @@
+<style>
+
+</style>
+<script>
+    function functie1() {
+        var name = document.getElementById("in").value;
+        let containsS = false;
+        for (let i = 0; i < name.length; i++) {
+            containsS ||= name[i] == "s";
+        }
+        if (containsS) {
+            console.log("Je naam bevat een s.");
+            console.log("Je naam bevat een s.");
+        }
+    }
+</script>
+<input id="in">
+<button onclick="functie1();">Click</button>
+<div id="out"></div>

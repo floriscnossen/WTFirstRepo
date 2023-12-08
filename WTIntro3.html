@@ -1,0 +1,20 @@
+<style>
+
+</style>
+<script>
+    function functie1() {
+        var name = document.getElementById("in").value;
+        if (name == "pieter" || name == "Pieter") {
+            document.getElementById("out").innerHTML = "Ja Pieter, jij hebt er vorige keer zo'n bende van gemaakt. Jij bent niet welkom.";
+        }
+        else {
+            document.getElementById("out").innerHTML = "Welkom " + name;
+        }
+        for (let x = 0; x < 10; x++) {
+            console.log(x);
+        }
+    }
+</script>
+<input id="in">
+<button onclick="functie1();">Click</button>
+<div id="out"></div>
